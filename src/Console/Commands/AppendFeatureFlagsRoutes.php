@@ -13,7 +13,7 @@ class AppendFeatureFlagsRoutes extends Command
     public function handle()
     {
         $this->appendRoutes(__DIR__ . '/../../routes/web.php', base_path('routes/web.php'));
-        $this->appendRoutes(__DIR__ . '/../../routes/api_v1.php', base_path('routes/api.php'));
+        $this->appendRoutes(__DIR__ . '/../../routes/api_v1.php', base_path('routes/api_v1.php'));
     }
 
     protected function appendRoutes($packageRoutes, $appRoutes)
