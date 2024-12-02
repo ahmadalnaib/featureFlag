@@ -24,8 +24,9 @@ class FeatureFlagsServiceProvider extends ServiceProvider
         ], 'feature-flags-views');
 
         $this->publishes([
-            __DIR__.'/Models/FeatureFlag.php' => resource_path('Models/FeatureFlag.php'),
+            __DIR__.'/Models/FeatureFlag.php' => app_path('Models/FeatureFlag.php'),
         ], 'feature-flags-models');
+
 
         
     }
