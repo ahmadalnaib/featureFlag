@@ -1,40 +1,32 @@
 <?php
-// src/Http/Controllers/FeatureFlagController.php
-<?php
 
-namespace YourName\FeatureFlags\Http\Controllers;
+namespace App\Http\Controllers;
 
+use Inertia\Inertia;
+use App\Models\FeatureFlag;
 use Illuminate\Http\Request;
-use YourName\FeatureFlags\Models\FeatureFlag;
 
-class FeatureFlagController extends Controller 
+class FeatureFlagController extends Controller
 {
+    //
     public function index()
     {
-        return FeatureFlag::all();
+        $features = FeatureFlag::all();
+        return Inertia::render('Admin/Features/Index', [
+            'features' => $features
+        ]);
     }
 
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            'name' => 'required|string|unique:feature_flags',
-            'enabled' => 'boolean',
-            'description' => 'nullable|string'
-        ]);
-
-        return FeatureFlag::create($validated);
+        FeatureFlag::create($request->all());
+        return redirect()->back();
     }
 
     public function update(Request $request, $id)
     {
         $feature = FeatureFlag::findOrFail($id);
-        
-        $validated = $request->validate([
-            'enabled' => 'boolean',
-            'description' => 'nullable|string'
-        ]);
-        
-        $feature->update($validated);
-        return $feature;
+        $feature->update($request->all());
+        return redirect()->back();
     }
 }
