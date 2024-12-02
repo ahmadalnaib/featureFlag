@@ -23,6 +23,10 @@ class FeatureFlagsServiceProvider extends ServiceProvider
             __DIR__.'/resources/js/Pages/Admin/Featuress/Index.vue' => resource_path('js/Pages/Admin/Featuress/Index.vue'),
         ], 'feature-flags-views');
 
+        $this->publishes([
+            __DIR__.'/Models/FeatureFlag.php' => resource_path('Models/FeatureFlag.php'),
+        ], 'feature-flags-models');
+
         
     }
     public function register()
