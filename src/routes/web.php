@@ -1,5 +1,5 @@
 
-
+<?php
 use App\Http\Controllers\FeatureFlagController;
 
 Route::middleware(['web', 'auth:admin'])->prefix('admin')->group(function () {

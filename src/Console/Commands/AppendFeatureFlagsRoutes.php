@@ -17,6 +17,8 @@ class AppendFeatureFlagsRoutes extends Command
 
         if (File::exists($packageRoutes)) {
             $routesContent = File::get($packageRoutes);
+            // Remove the <?php tag if it exists
+            $routesContent = preg_replace('/<\?php\s*/', '', $routesContent);
             File::append($appRoutes, "\n" . $routesContent);
             $this->info('Feature flags routes have been appended to routes/web.php');
         } else {
