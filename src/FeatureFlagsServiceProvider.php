@@ -13,6 +13,9 @@ class FeatureFlagsServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/config/feature-flags.php' => config_path('feature-flags.php'),
         ], 'feature-flags-config');
+        $this->publishes([
+            __DIR__.'/database/migrations' => config_path('migrations'),
+        ], 'feature-flags-migrations');
     }
 
     public function register()
