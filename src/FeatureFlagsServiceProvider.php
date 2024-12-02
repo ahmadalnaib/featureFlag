@@ -13,10 +13,10 @@ class FeatureFlagsServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/config/feature-flags.php' => config_path('feature-flags.php'),
         ], 'feature-flags-config');
+        <?php
         $this->publishes([
-            __DIR__.'/database/migrations' => config_path('migrations/2024_01_01_create_feature_flags_table.php'),
+            __DIR__.'/database/migrations/2024_01_01_create_feature_flags_table.php' => database_path('migrations/2024_01_01_create_feature_flags_table.php'),
         ], 'feature-flags-migrations');
-    }
 
     public function register()
     {
