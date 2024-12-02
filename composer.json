@@ -19,5 +19,7 @@
                 "YourName\\LaravelFeatureFlags\\FeatureFlagsServiceProvider"
             ]
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
