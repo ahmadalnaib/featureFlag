@@ -20,7 +20,7 @@ class FeatureFlagsServiceProvider extends ServiceProvider
         ], 'feature-flags-migrations');
    
         $this->publishes([
-            __DIR__.'/resources/js/Pages/Admin/Featuress/Index.vue' => resource_path('js/Pages/Admin/Featuress/Index.vue'),
+            __DIR__.'/resources/js/Pages/Admin/Features/Index.vue' => resource_path('js/Pages/Admin/Features/Index.vue'),
         ], 'feature-flags-views');
 
         $this->publishes([
