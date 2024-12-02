@@ -1,8 +1,5 @@
 <?php
-// src/FeatureFlagsServiceProvider.php
-<?php
-
-namespace YourName\FeatureFlags;
+namespace YourName\LaravelFeatureFlags;
 
 use Illuminate\Support\ServiceProvider;
 
