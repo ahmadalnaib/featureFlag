@@ -13,10 +13,9 @@ class FeatureFlagsServiceProvider extends ServiceProvider
         
         $this->publishes([
             __DIR__.'/config/feature-flags.php' => config_path('feature-flags.php'),
-            __DIR__.'/database/migrations/2025_01_01_092432_create_feature_flags_table' => database_path('migrations/2025_01_01_092432_create_feature_flags_table'),
+            __DIR__.'/database/migrations/9999_12_31_235959_create_feature_flags_table.php' => database_path('migrations/9999_12_31_235959_create_feature_flags_table.php'),
             __DIR__.'/Http/Controllers/FeatureFlagController.php' => app_path('Http/Controllers/FeatureFlagController.php'),
             __DIR__.'/Http/Controllers/Api/V1/FeatureFlagController.php' => app_path('Http/Controllers/Api/V1/FeatureFlagController.php'),
-          
         ], 'feature-flags');
     }
 
