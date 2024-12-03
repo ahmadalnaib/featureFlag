@@ -9,13 +9,7 @@ use Illuminate\Http\Request;
 class FeatureFlagController extends Controller
 {
     //
-    public function index()
-    {
-        $features = FeatureFlag::all();
-        return Inertia::render('Admin/Features/Index', [
-            'features' => $features
-        ]);
-    }
+
 
     public function store(Request $request)
     {
