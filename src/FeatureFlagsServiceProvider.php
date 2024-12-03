@@ -14,8 +14,6 @@ class FeatureFlagsServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/config/feature-flags.php' => config_path('feature-flags.php'),
             __DIR__.'/database/migrations/2025_01_01_create_feature_flags_table.php' => database_path('migrations/2025_01_01_create_feature_flags_table.php'),
-            // __DIR__.'/resources/js/Pages/Admin/Features/Index.vue' => resource_path('js/Pages/Admin/Features/Index.vue'),
-            // __DIR__.'/Models/FeatureFlag.php' => app_path('Models/FeatureFlag.php'),
             __DIR__.'/Http/Controllers/FeatureFlagController.php' => app_path('Http/Controllers/FeatureFlagController.php'),
             __DIR__.'/Http/Controllers/Api/V1/FeatureFlagController.php' => app_path('Http/Controllers/Api/V1/FeatureFlagController.php'),
           
