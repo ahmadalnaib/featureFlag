@@ -17,6 +17,7 @@ class FeatureFlagsServiceProvider extends ServiceProvider
             __DIR__.'/Http/Controllers/FeatureFlagController.php' => app_path('Http/Controllers/FeatureFlagController.php'),
             __DIR__.'/Http/Controllers/Api/V1/FeatureFlagController.php' => app_path('Http/Controllers/Api/V1/FeatureFlagController.php'),
         ], 'feature-flags');
+        
     }
 
     public function register()
